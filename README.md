@@ -1,16 +1,59 @@
-# React + Vite
+# GONE STORE — Product Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite + Tailwind CSS admin dashboard for managing a product catalog (create, edit, delete, search, filter, and stock/inventory stats). Data is persisted to the browser's `localStorage`.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Then open the printed local URL in your browser.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
 
-## Expanding the ESLint configuration
+```
+src/
+├── App.jsx                     # Root component, renders the admin page
+├── main.jsx                    # React entry point
+├── index.css / App.css         # Global styles (Tailwind import)
+│
+├── pages/
+│   └── ProductAdminPage.jsx    # Top-level page: owns app state & navigation
+│
+├── components/
+│   ├── layout/
+│   │   ├── Sidebar.jsx         # Left navigation (Products / Create Product)
+│   │   └── Topbar.jsx          # Header bar (menu, notifications, profile)
+│   │
+│   ├── products/
+│   │   ├── ProductsPage.jsx       # Products list page layout
+│   │   ├── StatsOverview.jsx      # Total/stock/low/out-of-stock cards
+│   │   ├── ProductToolbar.jsx     # Search input + category filter
+│   │   ├── ProductTable.jsx       # Desktop table view
+│   │   ├── ProductMobileList.jsx  # Mobile card list view
+│   │   └── ProductForm.jsx        # Create / edit product form
+│   │
+│   └── common/
+│       ├── Field.jsx              # Labeled form field wrapper
+│       ├── Toast.jsx              # Success/error toast notification
+│       └── ConfirmDeleteModal.jsx # Delete confirmation dialog
+│
+├── hooks/
+│   └── useProducts.js          # Product state, localStorage sync, stats, CRUD actions
+│
+├── constants/
+│   ├── categories.js           # Available product categories
+│   ├── initialProducts.js      # Seed/demo product data
+│   └── icons.jsx                # Shared SVG icon set
+│
+└── utils/
+    ├── validateProductForm.js  # Form validation logic
+    └── getInputClassName.js    # Shared input styling helper
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Notes
+
+- All product data lives in `localStorage` under the `products` key — clearing site data resets it back to the seed list in `constants/initialProducts.js`.
+- Functionality and visual design are unchanged from the original single-file version; the code has only been split into smaller, focused components and modules for readability and maintainability.

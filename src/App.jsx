@@ -1,5 +1,5 @@
-import ProductAdmin from './ProductAdmin'
+import ProductAdminPage from "./pages/ProductAdminPage";
 
 export default function App() {
-  return <ProductAdmin />
+  return <ProductAdminPage />;
 }
