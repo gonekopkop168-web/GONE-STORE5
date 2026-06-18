@@ -1,4 +1,4 @@
-// Confirmation modal shown before a product is permanently deleted.
+// 
 export default function ConfirmDeleteModal({ open, onCancel, onConfirm }) {
   if (!open) return null;
 
