@@ -1,4 +1,4 @@
-// Small success/error toast shown after create, update, or delete actions.
+
 export default function Toast({ toast }) {
   if (!toast) return null;
 

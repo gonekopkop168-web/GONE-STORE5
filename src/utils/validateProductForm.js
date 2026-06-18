@@ -1,5 +1,3 @@
-// Validates the product create/edit form. Returns an object of field -> error message.
-// An empty object means the form is valid.
 export function validateProductForm(form) {
   const errors = {};
   if (!form.name.trim()) errors.name = "Product name is required";

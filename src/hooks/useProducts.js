@@ -5,7 +5,6 @@ export const EMPTY_FORM = { name: "", category: "", price: "", stock: "", descri
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&q=80";
 
-// Encapsulates product data: persisted state, derived stats, and create/update/delete actions.
 export function useProducts() {
   const [products, setProducts] = useState(() => {
     const saved = localStorage.getItem("products");

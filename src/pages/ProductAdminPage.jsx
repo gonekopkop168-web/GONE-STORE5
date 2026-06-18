@@ -1,3 +1,4 @@
+
 import { useState, useMemo } from "react";
 import { CATEGORIES } from "../constants/categories";
 import { useProducts, EMPTY_FORM } from "../hooks/useProducts";
@@ -9,8 +10,6 @@ import Topbar from "../components/layout/Topbar";
 import ProductsPage from "../components/products/ProductsPage";
 import ProductForm from "../components/products/ProductForm";
 
-// Top-level admin dashboard: owns navigation/page state and delegates rendering
-// to the layout (Sidebar, Topbar) and feature (ProductsPage, ProductForm) components.
 export default function ProductAdminPage() {
   const { products, stats, addProduct, updateProduct, deleteProduct } = useProducts();
 
@@ -25,8 +24,6 @@ export default function ProductAdminPage() {
   const [toast, setToast] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Navigates to a page and closes the mobile sidebar, mirroring the
-  // original "close sidebar whenever the page changes" behavior.
   const goToPage = (nextPage) => {
     setPage(nextPage);
     setSidebarOpen(false);

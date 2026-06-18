@@ -1,5 +1,4 @@
-// Shared icon set used across the admin dashboard.
-// Kept as a simple lookup object so existing usage (e.g. {ICONS.box}) keeps working unchanged.
+
 export const ICONS = {
   box: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">

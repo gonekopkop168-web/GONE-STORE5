@@ -1,8 +1,8 @@
+
 import Field from "../common/Field";
 import { ICONS } from "../../constants/icons";
 import { getInputClassName } from "../../utils/getInputClassName";
 
-// Create/Edit product form. `mode` is "create" or "edit" and controls copy + submit label.
 export default function ProductForm({ mode, form, errors, onFieldChange, onSubmit, onCancel, categories }) {
   const isCreate = mode === "create";
 

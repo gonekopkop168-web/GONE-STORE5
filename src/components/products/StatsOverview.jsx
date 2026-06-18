@@ -1,6 +1,6 @@
+
 import { ICONS } from "../../constants/icons";
 
-// Four summary cards: total products, total stock, low stock, out of stock.
 export default function StatsOverview({ stats }) {
   const cards = [
     { label: "Total Products", value: stats.total, icon: ICONS.box, color: "bg-blue-500" },

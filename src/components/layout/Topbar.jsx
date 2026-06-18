@@ -1,6 +1,6 @@
+
 import { ICONS } from "../../constants/icons";
 
-// Top header bar: mobile menu trigger, notification bell, and admin profile badge.
 export default function Topbar({ onOpenSidebar }) {
   return (
     <header className="h-14 sm:h-16 bg-white border-b border-slate-100 flex items-center justify-between px-4 sm:px-6 shrink-0">

@@ -1,10 +1,10 @@
+
 import { ICONS } from "../../constants/icons";
 import StatsOverview from "./StatsOverview";
 import ProductToolbar from "./ProductToolbar";
 import ProductTable from "./ProductTable";
 import ProductMobileList from "./ProductMobileList";
 
-// Full "Products" page: header, stats, search/filter toolbar, table/list, and footer count.
 export default function ProductsPage({
   products,
   filtered,

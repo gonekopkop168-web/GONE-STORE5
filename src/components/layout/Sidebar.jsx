@@ -1,7 +1,6 @@
+
 import { ICONS } from "../../constants/icons";
 
-// Left navigation: brand mark, Products link, Create Product link.
-// Slides in as an overlay on mobile, static on large screens.
 export default function Sidebar({ page, sidebarOpen, onClose, onGoProducts, onGoCreate }) {
   return (
     <>

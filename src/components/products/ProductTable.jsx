@@ -1,6 +1,6 @@
+
 import { ICONS } from "../../constants/icons";
 
-// Desktop (md and up) table view of the filtered product list.
 export default function ProductTable({ products, onEdit, onDeleteRequest }) {
   return (
     <div className="hidden md:block overflow-x-auto">

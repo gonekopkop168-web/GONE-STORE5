@@ -1,6 +1,6 @@
+
 import { ICONS } from "../../constants/icons";
 
-// Search input plus a category filter dropdown for the products table.
 export default function ProductToolbar({
   search,
   onSearchChange,

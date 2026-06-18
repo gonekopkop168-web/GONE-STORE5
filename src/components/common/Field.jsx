@@ -1,4 +1,4 @@
-// Wraps a form control with a label, icon, and optional error message.
+
 export default function Field({ label, icon, error, children }) {
   return (
     <div className="flex flex-col gap-1">

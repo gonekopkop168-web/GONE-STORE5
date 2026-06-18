@@ -1,6 +1,6 @@
+
 import { ICONS } from "../../constants/icons";
 
-// Mobile (below md) card-list view of the filtered product list.
 export default function ProductMobileList({ products, onEdit, onDeleteRequest }) {
   return (
     <div className="md:hidden divide-y divide-slate-50">
